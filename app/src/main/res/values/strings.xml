@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="ageText">Age</string>
+    <string name="weightText">Weight</string>
+    <string name="heightText">Height</string>
+    <string name="ageValue">Years</string>
+    <string name="weightValue">Pounds</string>
+    <string name="heightValueFeet">Feet</string>
+    <string name="heightValueInches">Inches</string>
+    <string name="calculateButton">Calculate</string>
+    <string name="resultText">Result</string>
+    <string name="BMIText">BMI =</string>
+    <string name="normalBmiRangeText">Normal BMI Range: 18.5 - 25</string>
+</resources>

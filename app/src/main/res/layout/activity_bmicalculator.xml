@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.praya.bmicalculator.BMICalculator">
+
+    <TextView
+        android:id="@+id/ageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/ageText"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/weightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/weightField"
+        android:layout_alignBottom="@+id/weightField"
+        android:layout_alignLeft="@+id/ageLabel"
+        android:layout_alignStart="@+id/ageLabel"
+        android:text="@string/weightText"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/heightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/weightLabel"
+        android:layout_alignStart="@+id/weightLabel"
+        android:layout_below="@+id/weightField"
+        android:layout_marginTop="25dp"
+        android:text="@string/heightText"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/ageField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ageLabel"
+        android:layout_alignBottom="@+id/ageLabel"
+        android:layout_alignLeft="@+id/weightField"
+        android:layout_alignStart="@+id/weightField"
+        android:ems="10"
+        android:hint="@string/ageValue"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/weightField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/heightFieldFeet"
+        android:layout_alignStart="@+id/heightFieldFeet"
+        android:layout_below="@+id/ageField"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/weightValue"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/heightFieldFeet"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/heightLabel"
+        android:layout_alignBottom="@+id/heightLabel"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/heightValueFeet"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/heightInchesField"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/heightFieldFeet"
+        android:layout_alignBottom="@+id/heightFieldFeet"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/heightFieldFeet"
+        android:layout_toRightOf="@+id/heightFieldFeet"
+        android:ems="10"
+        android:hint="@string/heightValueInches"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightFieldFeet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:text="@string/calculateButton" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/calculateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="@string/resultText"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/bmiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultText"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@+id/resultText"
+        android:layout_toStartOf="@+id/resultText"
+        android:text="@string/BMIText"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/normalBmiRangeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/heightLabel"
+        android:layout_alignStart="@+id/heightLabel"
+        android:layout_below="@+id/bmiText"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/normalBmiRangeText"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/bmiMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/normalBmiRangeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/bmiRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bmiText"
+        android:layout_alignBottom="@+id/bmiText"
+        android:layout_toEndOf="@+id/resultText"
+        android:layout_toRightOf="@+id/resultText"
+        android:textSize="18sp" />
+
+</RelativeLayout>
